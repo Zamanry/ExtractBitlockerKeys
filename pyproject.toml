@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "extract-bitlocker-keys-msldap"
+version = "2.2.0"
+description = "Extract BitLocker recovery keys from Active Directory using msldap 0.5.15."
+requires-python = ">=3.8"
+dependencies = [
+    "msldap==0.5.15",
+    "XlsxWriter>=3.1.0,<4.0.0",
+]
+
+# Expose a CLI so users can run `extract-bitlocker-keys-msldap`
+[project.scripts]
+extract-bitlocker-keys-msldap = "ExtractBitlockerKeys_msldap:main"
+
+# Since this is a single-file module, include it explicitly.
+[tool.setuptools]
+py-modules = ["ExtractBitlockerKeys_msldap"]

@@ -1,2 +1,2 @@
-sectools>=1.4.1
-xlsxwriter
+msldap==0.5.15
+XlsxWriter>=3.1.0,<4.0.0
